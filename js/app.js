@@ -22,23 +22,16 @@ function generatedNumber (min, max) {
 }
 
 //Guess Function
-function userGuess () {
+function userGuess() {
   currentElement.innerText = inputNumElement.name;
 }
 
-
- function render() {
-    // Call the created functions
-    generatedNumber (0, 100);
-    userGuess ();
+function render() {
+  generatedNumber(1, 10);
+  userGuess();
 }
 
-submissionBtn.addEventListener("click", userGuess () {
-    render();
+submitElement.addEventListener("click", function () {
+  // Update this function
+  render();
 });
-
-
-submitElement.addEventListener("click", userGuess (){
-  expression = "0"
-  displayValue()
-})
