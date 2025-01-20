@@ -10,7 +10,9 @@ const guessElement = document.getElementById("guess-message");
 const currentElement = document.getElementById("current-guess");
 const computerElement = document.getElementById("computer-guess");
 const historyElement = document.getElementById("guess-history");
-const inputNumElement = document.getElementById("guess-inpu")
+const inputNumElement = document.getElementById("guess-input")
+const submitElement = document.getElementById("submit-btn")
+const clearElement = document.getElementById("restart-btn")
 
 // Number Generation/Computer Guess
 function generatedNumber (min, max) {
@@ -20,20 +22,23 @@ function generatedNumber (min, max) {
 }
 
 //Guess Function
-
+function userGuess () {
+  currentElement.innerText = inputNumElement.name;
+}
 
 
  function render() {
     // Call the created functions
     generatedNumber (0, 100);
+    userGuess ();
 }
 
-submissionBtn.addEventListener("click", function () {
+submissionBtn.addEventListener("click", userGuess () {
     render();
 });
 
-let clear = document.getElementById("restart-btn")
-clear.addEventListener("click", function(){
+
+submitElement.addEventListener("click", userGuess (){
   expression = "0"
   displayValue()
 })
