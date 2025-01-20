@@ -26,6 +26,20 @@ function userGuess() {
   currentElement.innerText = inputNumElement.name;
 }
 
+//Logic
+let tries = 0
+while (count < 4){
+  function logic() {
+    if (currentElement = computerElement) {
+      guessElement.innerText = "You got it!!!"
+    } else {
+      guessElement.innerText = "Try Again"
+    }
+  }
+  tries++
+}
+
+
 function render() {
   generatedNumber(1, 10);
   userGuess();
